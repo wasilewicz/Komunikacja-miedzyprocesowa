@@ -35,6 +35,9 @@ $(NAME): $(OBJECTS)
 %.o: %.c
 	$(CC) -c $(CFLAGS) $< -o $@
 
+main.o: main.c
+	gcc -o main.o main.c
+
 clean:
 	rm -f $(OBJECTS)
 	rm -f $(NAME)
