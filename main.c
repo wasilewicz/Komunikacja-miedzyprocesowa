@@ -248,10 +248,13 @@ void add_user(char *_name, int _fd)
 void write_all_users()
 {
     struct person* pointer_to_user = first;
+    struct person* s_pointer_to_user;
+    
     while(pointer_to_user->next != NULL)
     {
         printf("%s ",pointer_to_user->name );
-        pointer_to_user = pointer_to_user->next;
+        s_pointer_to_user = pointer_to_user->next;
+        pointer_to_user = s_pointer_to_user;
     }
 }
 
